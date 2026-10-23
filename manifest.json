@@ -1,7 +1,7 @@
 ```json
 {
-  "name": "Minimal PWA",
-  "short_name": "MinPWA",
+  "name": "Stacker",
+  "short_name": "Stack",
   "description": "A minimal Progressive Web App example.",
   "start_url": "/",
   "display": "standalone",
