@@ -1,5 +1,5 @@
 ```javascript
-const CACHE_NAME = 'minimal-pwa-cache-v1';
+const CACHE_NAME = 'Stacker-pwa-cache-v1';
 // List all essential files your PWA needs to work offline
 const urlsToCache = [
   '/',
