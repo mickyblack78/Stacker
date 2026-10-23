@@ -1,0 +1,53 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Minimal PWA</title>
+
+    <!-- 1. Link to the Manifest File (Tells the browser how to install it) -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- 2. Link to your main CSS file -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <!-- 3. Icon for the app -->
+    <link rel="icon" href="/e.png" type="image/png" />
+</head>
+<body>
+
+    <div class="revision">Revision 8</div>
+    
+    <!-- Replace this with your actual image source -->
+    <img src="pwa-fonts.png" alt="PWA Asset">
+    
+    <div class="main-text">
+        Minimal PWA, open Console for more!
+    </div>
+
+    <div class="network-message">
+        Network: <span id="network-status" class="">Good</span>
+    </div>
+
+    <!-- 4. Service Worker Registration (Tells the browser to use offline caching) -->
+    <script type="text/javascript">
+      if (navigator.serviceWorker != null) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+          });
+      }
+    </script>
+
+</body>
+</html>
+```
+
+**To make this a functional PWA, you must also create and upload these two files to the same directory in your GitHub repository:**
+
+1.  `manifest.json` (The configuration file)
+2.  `service-worker.js` (The offline caching script)
